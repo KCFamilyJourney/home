@@ -6,3 +6,16 @@
 .content {
   text-align: center;
 }
+
+/* Default state of the button */
+.place_button {
+  width: 200px;
+  border-radius: 80%;
+  border: 5px solid rgb(23, 104, 217);
+  cursor: pointer; /* Makes the mouse look clickable */
+}
+
+/* Hover state */
+.place_button:hover {
+  border: 5px solid #0ecb47; /* Darkens the border on hover */
+}
