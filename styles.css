@@ -1,4 +1,8 @@
 /* Existing styles from source */
+body {
+  background-color: rgba(168, 208, 233, 0.588); /* You can also use the hex code #87CEFA */
+}
+
 .place {
   width: 200px; /*[cite: 4] */
   border-radius: 80%; /*[cite: 4] */
