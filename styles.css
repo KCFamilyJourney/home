@@ -1,21 +1,73 @@
+/* Existing styles from source */
 .place {
-  width: 200px;
-  border-radius: 80%;
+  width: 200px; /*[cite: 4] */
+  border-radius: 80%; /*[cite: 4] */
 }
 
 .content {
-  text-align: center;
+  text-align: center; /*[cite: 4] */
 }
 
 /* Default state of the button */
 .place_button {
-  width: 200px;
-  border-radius: 80%;
-  border: 5px solid rgb(23, 104, 217);
-  cursor: pointer; /* Makes the mouse look clickable */
+  width: 200px; /*[cite: 4] */
+  border-radius: 80%; /*[cite: 4] */
+  border: 5px solid rgb(23, 104, 217); /*[cite: 4] */
+  cursor: pointer; /* Makes the mouse look clickable */ /*[cite: 4] */
 }
 
 /* Hover state */
 .place_button:hover {
-  border: 5px solid #0ecb47; /* Darkens the border on hover */
+  border: 5px solid #0ecb47; /* Darkens the border on hover */ /*[cite: 4] */
+}
+
+
+/* 
+===========================================
+   NEW RESPONSIVE LAYOUT STYLES
+===========================================
+*/
+
+/* Top Profile Header Layout */
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Grid layout for limiting to 3 items per row */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Enforces exactly 3 columns maximum */
+  gap: 30px; /* Space between items */
+  justify-items: center; /* Centers the images within their grid cells */
+  margin: 20px 0;
+}
+
+/* 
+===========================================
+   MEDIA QUERIES (Dynamic Sizing)
+===========================================
+*/
+
+/* For tablets and smaller laptops (e.g., smaller than 900px wide) */
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Drops row limit down to 2 items */
+  }
+}
+
+/* For mobile phones (e.g., smaller than 600px wide) */
+@media (max-width: 600px) {
+  /* Stack the header text below the profile image */
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  /* Drops row limit down to 1 item per row */
+  .grid-container {
+    grid-template-columns: 1fr; 
+  }
 }
